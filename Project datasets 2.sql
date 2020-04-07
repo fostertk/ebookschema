@@ -22,7 +22,7 @@ FROM ReadingSession as session
 LEFT JOIN Review as review
 	ON session.book_id = review.book_id
 	AND session.member_id = review.member_id
-WHERE session.Percentage_Comp = 100; 
+WHERE session.Percentage_Comp = 100;
 
 -- Demographic of Customer 
 SELECT cust.member_id as "Member ID",
@@ -66,6 +66,14 @@ SELECT AVG(results.review_rating) "Average Review Rating of not Completed Ebooks
 			AND session.member_id = review.member_id
 		WHERE session.Percentage_Comp < 100
 	) as results;
+    
+-- Males vs Females
+-- this is an example of something that would change
+
+-- some queries
+
+select * from customer;
+    
 
 
 
