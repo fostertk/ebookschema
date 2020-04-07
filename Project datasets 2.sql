@@ -11,6 +11,7 @@ LEFT JOIN Review as review
 	AND session.member_id = review.member_id
 WHERE session.Percentage_Comp < 100;
 
+
 -- Reviews when customer has completed Ebook
 SELECT  review.review_id as "Review ID",
 		session.member_id as "Member ID",
